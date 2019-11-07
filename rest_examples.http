@@ -1,0 +1,36 @@
+GET http://localhost:8080/workPlaces/search/findAllByFloor?floor=9
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-08T010111.200.json
+<> 2019-11-08T125957.200.json
+
+###
+GET http://localhost:8080/workPlaces/search/findAllByCode?code=01
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-08T010219.200.json
+
+###
+GET http://localhost:8080/workPlaces/bookPlaceByCode?{floor=9,sector=R,code=01}
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-08T013407.500.json
+<> 2019-11-08T013344.500.json
+<> 2019-11-08T013321.500.json
+<> 2019-11-08T013314.404.json
+
+###
+GET http://localhost:8080/workPlaces/search/bookPlaceByCode?floor=9&sector=R&code=01
+Accept: */*
+Cache-Control: no-cache
+###
+
+
+GET http://localhost:8080/workPlaces/search/freePlaceByCode?floor=9&sector=R&code=01
+Accept: */*
+Cache-Control: no-cache
+
+###
