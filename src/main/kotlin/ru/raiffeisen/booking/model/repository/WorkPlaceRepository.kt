@@ -5,14 +5,15 @@ import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 import org.springframework.data.repository.query.Param
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
+import org.springframework.data.rest.core.annotation.RestResource
 import org.springframework.stereotype.Repository
 import ru.raiffeisen.booking.model.Status
 import ru.raiffeisen.booking.model.WorkPlace
 import javax.transaction.Transactional
 
 @Repository
-interface WorkPlaceRepository : CrudRepository<WorkPlace, Int> {
-    fun findAllByFloor(floor: Int?): List<WorkPlace>
+interface WorkPlaceRepository : CrudRepository<WorkPlace, Long> {
+    fun findAllByFloor(floor: Int): List<WorkPlace>
     fun findAllByCode(code: String?): List<WorkPlace>
 
     @Modifying

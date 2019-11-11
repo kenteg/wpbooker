@@ -34,3 +34,22 @@ Accept: */*
 Cache-Control: no-cache
 
 ###
+
+POST http://localhost:8080/bookplace
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "floor": 9, "code":"01", "sector":"R"
+}
+
+###
+POST http://localhost:8080/freeplace
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "floor": 9, "code":"01", "sector":"R"
+}
+
+###
